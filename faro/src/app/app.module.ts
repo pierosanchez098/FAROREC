@@ -19,6 +19,7 @@ import { AdminComponent } from './admin/admin.component';
 import { FormsModule } from '@angular/forms';
 import { MisEventosComponent } from './mis-eventos/mis-eventos.component';
 import { NotificacionesComponent } from './notificaciones/notificaciones.component';
+import { CookiesComponent } from './cookies/cookies.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { NotificacionesComponent } from './notificaciones/notificaciones.compone
     ChatComponent,
     AdminComponent,
     MisEventosComponent,
-    NotificacionesComponent
+    NotificacionesComponent,
+    CookiesComponent
   ],
   imports: [
     BrowserModule,

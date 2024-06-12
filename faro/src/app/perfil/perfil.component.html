@@ -1,6 +1,17 @@
 <div>
-    <button routerLink="/login">Login</button>
-</div>
+    <button (click)="mostrarPopupCerrarSesion()">Cerrar sesión</button>
+  </div>
+  
+  <div class="overlay" *ngIf="mostrarPopup">
+    <div class="popup-container">
+      <div class="popup-content">
+        <p>¿Estás seguro que deseas cerrar sesión?</p>
+        <button class="btn btn-success" (click)="confirmarCerrarSesion()">Sí</button>
+        <button class="btn btn-danger" (click)="cancelarCerrarSesion()">No</button>
+      </div>
+    </div>
+  </div>
+
 <div class="perfil-general">
     <div class="sec-imagen">
         <img src="assets/Faro-logo.png" alt="foto perfil" class="foto-perfil">

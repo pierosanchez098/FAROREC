@@ -11,6 +11,7 @@ import { ChatComponent } from './chat/chat.component';
 import { AdminComponent } from './admin/admin.component';
 import { MisEventosComponent } from './mis-eventos/mis-eventos.component';
 import { NotificacionesComponent } from './notificaciones/notificaciones.component';
+import { CookiesComponent } from './cookies/cookies.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'mis-eventos', component: MisEventosComponent},
   { path: 'notificaciones', component: NotificacionesComponent},
+  { path: 'cookies', component: CookiesComponent},
   { path: '', redirectTo: 'login', pathMatch: 'full' }, // Redirección a login
   { path: '**', redirectTo: 'login', pathMatch: 'full' } // Redirección a login para rutas no definidas
 ];

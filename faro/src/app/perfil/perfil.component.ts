@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
   styleUrls: ['./perfil.component.css']
 })
-export class PerfilComponent implements OnInit {
+export class PerfilComponent {
 
-  constructor() { }
+  mostrarPopup: boolean = false;
 
-  ngOnInit(): void {
+  constructor(private router: Router) {}
+
+  mostrarPopupCerrarSesion(): void {
+    this.mostrarPopup = true;
   }
 
+  confirmarCerrarSesion(): void {
+    this.mostrarPopup = false;
+    this.router.navigate(['/login']);
+  }
+
+  cancelarCerrarSesion(): void {
+    this.mostrarPopup = false;
+  }
 }

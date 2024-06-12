@@ -1,0 +1,29 @@
+body {
+    background-color: #f8f9fa;
+  }
+  .contact-form {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 4%;
+    margin-bottom: 40%;
+  }
+  .contact-form h2 {
+    color: #333;
+    margin-bottom: 30px;
+  }
+  .contact-form label {
+    color: #555;
+  }
+  .contact-form textarea.form-control {
+    resize: none;
+  }
+  .contact-form button[type="submit"] {
+    background-color: #105208;
+    border-color: #007bff;
+  }
+  .contact-form button[type="submit"]:hover {
+    background-color: #06f019;
+    border-color: #0056b3;
+  }

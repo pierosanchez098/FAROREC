@@ -1,0 +1,28 @@
+<header *ngIf=" router.url !== '/login' && router.url !== '/registro' && router.url !== '/'">
+    <div>
+        <img src="assets/Faro-logo.png" alt="Logo faro" class="logo-menu" routerLink="/principal">
+    </div>
+    <div class="links-header ">
+        <button routerLink="/chat">
+            CHAT
+        </button>
+        <button routerLink="/eventos">
+            EVENTOS
+        </button>
+        <button routerLink="/mis-eventos">
+            MIS EVENTOS
+        </button>
+        <button routerLink="/lista-amigos">
+            AMIGOS
+        </button>
+        <button routerLink="/notificaciones">
+            <img src="https://images.vexels.com/media/users/3/223298/isolated/preview/d3c070ed1d488a95f3789c88b7c95674-icono-de-campana-de-notificaciones-plano.png" alt="Notificaciones" class="notificaciones-icono">
+        </button>
+        <img src="assets/Faro-logo.png" alt="imagen perfil" class="perfil-menu" routerLink="/perfil">
+    </div>
+</header>
+<header *ngIf=" router.url === '/login' || router.url === '/registro' || router.url === '/'">
+    <div>
+        <img src="assets/Faro-logo.png" alt="Logo faro" class="logo-menu" >
+    </div>
+</header>

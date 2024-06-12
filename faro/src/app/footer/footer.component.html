@@ -1,0 +1,8 @@
+<footer *ngIf=" router.url !== '/login' && router.url !== '/registro'">
+    <a routerLink="/contacto">Contacta con nosotros</a>
+    <a routerLink="/contacto">Cookies</a>
+</footer>
+
+<footer *ngIf=" router.url === '/login' || router.url === '/registro'">
+    
+</footer>

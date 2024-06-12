@@ -1,0 +1,170 @@
+.publicidad {
+    position: relative;
+    min-height: 150px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.publicidad::before {
+    content: "Publicidad";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.publicidad p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.mensaje-bienbenida {
+    height: 50px;
+    background-color: #f0cc62;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 50%;
+    margin-left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.quedadas {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5em;
+    border: 2px;
+    box-shadow: 0px 0px 3px 0px grey;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    padding: 2em;
+    width: 80vw;
+}
+
+.quedadas>input {
+    border: none;
+    border-bottom: 1px solid lightgray;
+    color: #595959;
+    width: 20vw;
+}
+
+.quedadas>input:hover,
+.quedadas>input:focus {
+    outline: none;
+    border-bottom: 1px solid #000000;
+    color: #000000;
+}
+
+.quedadas>div {
+    justify-content: flex-start;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: fit-content;
+    gap: 2em;
+}
+
+.quedadas>div>div {
+    height: fit-content;
+    min-width: 250px;
+    max-width: 10vw;
+    border-radius: 5%;
+    box-shadow: 1px 1px 1px 1px gray;
+    padding: 1vw;
+    overflow: hidden;
+}
+
+.quedadas>div>div>img {
+    margin-top: -90%;
+    margin-left: -2vw;
+    width: 150%;
+    height: auto;
+}
+
+.info-evento>button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    height: 2em;
+    padding: 0px;
+}
+
+.info-evento>button:hover {
+    color: #4CAF50;
+}
+
+.panel-amigos{
+    padding-top: 20px;
+    box-shadow: 0px 0px 1px 0px black;
+    border-radius: 0.5em;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 0em;
+}
+
+.lista-amigos {
+    margin-top: 5em;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 5em;
+    row-gap: 2em;
+    margin-bottom: 5em;
+}
+
+.lista-amigos>div>img {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.lista-amigos>div>p {
+    text-align: center;
+}
+
+.status-green {
+    width: 1vw;
+    height: 1vw;
+    border-radius: 100%;
+    border: 1px solid black;
+    background-color: darkgreen;
+    position: relative;
+    top: -1vw;
+    left: 0.5vw;
+}
+
+.hero-image {
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20230817/pngtree-a-lighthouse-on-a-rocky-outcrop-on-a-beach-at-sunset-image_13040600.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 50vh;
+    background-position: center;
+    padding: 50px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
+  }
+
+  .hero-image h1 {
+    color: white; 
+    font-size: 4em; 
+  }

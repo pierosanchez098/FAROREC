@@ -1,0 +1,90 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lista-amigos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.amigo {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.amigo:hover {
+  background: #f1f1f1;
+}
+
+.foto-perfil {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.info {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info .chat {
+  font-size: 16px;
+  font-weight: 500;
+  color: #007bff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.info .chat:hover {
+  color: #0056b3;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions .eliminar,
+.actions .bloquear {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.actions .eliminar {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+.actions .eliminar:hover {
+  background: #cc0000;
+}
+
+.actions .bloquear {
+  background: #ffc107;
+  color: #fff;
+}
+
+.actions .bloquear:hover {
+  background: #e0a800;
+}
+
+  

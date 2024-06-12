@@ -1,0 +1,46 @@
+header {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: beige;
+    align-items: center;
+}
+
+header>div {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+header>div>button {
+    width: 10em;
+    height: 3em;
+    border-radius: 0.5em;
+}
+
+.links-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5em;
+}
+
+.logo-menu {
+    width: 75px;
+    height: 75px;
+    filter: invert(100%);
+}
+
+.perfil-menu {
+    width: 75px;
+    height: 75px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.notificaciones-icono{
+    width: 40px;
+    height: auto;
+}

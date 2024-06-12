@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <h2 class="text-center mb-4">Lista de Amigos</h2>
+      <div class="lista-amigos">
+        <div class="amigo" *ngFor="let amigo of amigos">
+          <img [src]="amigo.img" alt="img amigo" class="foto-perfil">
+          <div class="info">
+            <button class="chat">{{ amigo.nombre }}</button>
+            <div class="actions">
+              <button class="eliminar" (click)="eliminarAmigo(amigo.id)">Eliminar</button>
+              <button class="bloquear" (click)="bloquearAmigo(amigo.id)">Bloquear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

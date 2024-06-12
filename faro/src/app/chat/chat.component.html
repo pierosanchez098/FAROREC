@@ -1,0 +1,40 @@
+<div class="todo">
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Lista de amigos -->
+      <div class="col-md-4">
+        <div class="card friend-list-card">
+          <div class="card-header bg-primary text-white">
+            Amigos
+          </div>
+          <ul class="list-group list-group-flush chat-list">
+            <li *ngFor="let amigo of amigos" class="list-group-item chat-list-item" (click)="seleccionarAmigo(amigo)">
+              {{ amigo.nombre }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Interfaz de chat -->
+      <div class="col-md-8">
+        <div class="card chat-card">
+          <div class="card-header bg-primary text-white">
+            Chat {{ amigoSeleccionado?.nombre || 'Selecciona un amigo' }}
+          </div>
+          <div class="card-body chat-box">
+            <div *ngFor="let mensaje of mensajes" class="message" [ngClass]="{'friend-message': mensaje.autor === 'amigo'}">
+              {{ mensaje.contenido }}
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Escribe tu mensaje..." [(ngModel)]="nuevoMensaje">
+              <div class="input-group-append">
+                <button class="btn btn-primary" (click)="enviarMensaje()">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

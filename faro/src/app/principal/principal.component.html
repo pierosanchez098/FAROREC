@@ -1,0 +1,81 @@
+<div class="hero-image">
+
+  <h1>¡Bienvenido!</h1>
+
+</div>
+
+<div class="quedadas mx-auto">
+  <input type="text" placeholder="Busca eventos en los que participes">
+  <div>
+    <div *ngFor="let evento of cantidad">
+      <img [src]="'https://picsum.photos/' + evento+'00'" alt="Quedada?">
+      <div class="info-evento">
+        <p>
+          Evento en el que participas
+        </p>
+        <button routerLink="/eventos">Ver más...</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="publicidad col-md-11 mx-auto d-flex align-items-center justify-content-center">
+  <p>
+    Descubre las mejores actividades cerca de ti. ¡Únete a Faro y comienza a hacer nuevas amistades hoy mismo!
+  </p>
+</div>
+<div class="quedadas mx-auto">
+  <input type="text" placeholder="Busca eventos o explora por categorias">
+  <div>
+    <div *ngFor="let evento of cantidad">
+      <img [src]="'https://picsum.photos/' + evento+'00'" alt="Quedada?">
+      <div class="info-evento">
+        <p>
+          Evento en x lugar a las n, hay comida y buen ambiente.
+        </p>
+        <button>Ver más...</button>
+      </div>
+    </div>
+    <div *ngFor="let evento of cantidad">
+      <img [src]="'https://picsum.photos/' + evento+'00'" alt="Quedada?">
+      <div class="info-evento">
+        <p>
+          Evento en x lugar a las n, actividades incluidas.
+        </p>
+        <button routerLink="/eventos">Ver más...</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="publicidad col-md-11 mx-auto d-flex align-items-center justify-content-center">
+  <p>
+    Evento en el que participas
+  </p>
+</div>
+
+
+<div class="panel-amigos col-md-11 mx-auto">
+  <p>Mis amigos</p>
+  <div class="lista-amigos">
+    <div *ngFor="let evento of cantidad" >
+      <img [src]="'https://picsum.photos/' + evento+'00'" alt="" href="/amigos">
+      <div class="status-green"></div>
+      <p><strong>
+          Amigo
+        </strong></p>
+    </div>
+  </div>
+</div>
+
+<div class="panel-amigos col-md-11 mx-auto">
+  <p>Quizas conozcas...</p>
+  <div class="quedadas mx-auto"><input type="text" placeholder="Buscar usuarios"></div>
+  <div class="lista-amigos">
+      <div (click)="enviarSolicitud()">
+      <img [src]="'https://picsum.photos/' +'00'" alt="" href="/amigos">
+      <p><strong>
+          Persona
+        </strong></p>
+    </div>
+  </div>
+</div>

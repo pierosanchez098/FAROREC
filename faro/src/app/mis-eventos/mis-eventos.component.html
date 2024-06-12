@@ -1,0 +1,95 @@
+<div class="hero-image">
+
+    <h1>GESTIONAR MIS EVENTOS</h1>
+  
+  </div>
+
+  <div class="container mt-5">
+
+  <h3>Eventos Públicos que asistiré</h3>
+  
+    <!-- Eventos Públicos por Asistir -->
+    <div *ngIf="eventosPublicosPorAsistir.length > 0">
+      <div class="row">
+        <div class="col-md-6" *ngFor="let evento of eventosPublicosPorAsistir">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">{{ evento.nombre }}</h5>
+              <p class="card-text">Fecha: {{ evento.fecha }}</p>
+              <p class="card-text">Hora: {{ evento.hora }}</p>
+              <p class="card-text">Dirección: {{ evento.direccion }}</p>
+              <p class="card-text">Descripción: {{ evento.descripcion }}</p>
+              <p class="card-text">Asistentes confirmados: {{ evento.asistentesConfirmados }}</p>
+              <button class="btn btn-danger" (click)="cancelarAsistencia(evento)">Cancelar asistencia</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Eventos Privados -->
+    <div *ngIf="eventosPrivados.length > 0">
+      <h3>Eventos Privados</h3>
+      <div class="row">
+        <div class="col-md-6" *ngFor="let evento of eventosPrivados">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">{{ evento.nombre }}</h5>
+              <p class="card-text">Fecha: {{ evento.fecha }}</p>
+              <p class="card-text">Hora: {{ evento.hora }}</p>
+              <p class="card-text">Dirección: {{ evento.direccion }}</p>
+              <p class="card-text">Descripción: {{ evento.descripcion }}</p>
+              <p class="card-text">Asistentes confirmados: {{ evento.asistentesConfirmados }}</p>
+              <button class="btn btn-danger" (click)="cancelarAsistencia(evento)">Cancelar asistencia</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Eventos Creados por Mí -->
+    <div *ngIf="eventosCreadosPorMi.length > 0">
+        <h3>Eventos Creados por Mí</h3>
+        <div class="row">
+          <div class="col-md-6" *ngFor="let evento of eventosCreadosPorMi">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">{{ evento.nombre }}</h5>
+                <p class="card-text">Fecha: {{ evento.fecha }}</p>
+                <p class="card-text">Hora: {{ evento.hora }}</p>
+                <p class="card-text">Dirección: {{ evento.direccion }}</p>
+                <p class="card-text">Descripción: {{ evento.descripcion }}</p>
+                <p class="card-text">Asistentes confirmados: {{ evento.asistentesConfirmados }}</p>
+                <button *ngIf="!evento.asistenciaCancelada" class="btn btn-danger" (click)="cancelarAsistencia(evento)">Cancelar asistencia</button>
+                <button *ngIf="evento.asistenciaCancelada" class="btn btn-success">Asistencia cancelada</button>
+                <button class="btn btn-danger" (click)="eliminarEvento(evento)">Eliminar evento</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  <!-- Popup de Confirmación -->
+<div class="overlay" *ngIf="mostrarPopup">
+    <div class="popup-container">
+      <div class="popup-content">
+        <h3>¿Estás seguro que deseas cancelar tu asistencia a este evento?</h3>
+        <button class="btn btn-success" (click)="confirmarCancelacionAsistencia()">Sí</button>
+        <button class="btn btn-danger" (click)="cancelarConfirmacion()">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup de Confirmación -->
+<div class="overlay" *ngIf="mostrarPopupEliminar">
+    <div class="popup-container">
+      <div class="popup-content">
+        <h3>¿Estás seguro que deseas eliminar este evento?</h3>
+      <p>El evento ya no aparecerá en la sección de "Mis eventos" de tus amigos y se les notificará de ello</p>
+    <button class="btn btn-success" (click)="confirmarEliminacionEvento()">Sí</button>
+    <button class="btn btn-danger" (click)="cancelarConfirmacion()">No</button>
+      </div>
+    </div>
+  </div>
+  

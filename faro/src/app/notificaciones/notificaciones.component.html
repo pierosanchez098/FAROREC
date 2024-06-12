@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <h2>Notificaciones</h2>
+    <div class="notificacion" *ngFor="let notificacion of notificaciones">
+        <div class="contenido">
+            <div class="texto">
+                <div class="titulo">{{ notificacion.titulo }}</div>
+                <div class="detalle">{{ notificacion.detalle }}</div>
+                <div class="fecha">{{ notificacion.fecha }}</div>
+                <button *ngIf="notificacion.tipo === 'solicitud_amistad'" (click)="aceptarSolicitudAmistad(notificacion.id)">Aceptar amistad</button>
+                <button *ngIf="notificacion.tipo === 'Mensaje'" routerLink="/chat">Ir al chat</button>
+                <button *ngIf="notificacion.tipo === 'Evento'" routerLink="/mis-eventos">Ir a mis eventos</button>
+            </div>
+        </div>
+        <img src="https://cdn-icons-png.flaticon.com/512/7560/7560626.png" alt="Eliminar" class="eliminar-icon" (click)="eliminarNotificacion(notificacion.id)">
+    </div>
+</div>
+
+
+  
+  

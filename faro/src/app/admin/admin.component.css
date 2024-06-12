@@ -1,0 +1,37 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    margin-top: 4%;
+    margin-bottom: 14%;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+  .btn-create {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+  }
+  .btn-create:hover {
+    background-color: #218838;
+  }
+  .btn-edit {
+    background-color: #ffc107;
+    color: #212529;
+    border: none;
+  }
+  .btn-edit:hover {
+    background-color: #ffca28;
+  }
+  .btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+  }
+  .btn-delete:hover {
+    background-color: #c82333;
+  }
